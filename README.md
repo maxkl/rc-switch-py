@@ -3,7 +3,7 @@
 
 This requires wiringPi
 
-```
+```sh
 mkdir build && cd build
 cmake ..
 make
