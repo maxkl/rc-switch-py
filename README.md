@@ -15,13 +15,14 @@ make
 
 Copy `build/rcswitch` to your python project, use it like this:
 
-```
-import rcswitch
+```py
+from rcswitch import RCSwitch
 
-rcswitch.setup()
+RCSwitch.setup()
 
-my_switch = rcswitch.RCSwitch()
+my_switch = RCSwitch()
 my_switch.enable_transmit(4)
+# my_switch.disable_transmit()
 my_switch.switch_on('01101', '10000')
 my_switch.switch_off('01101', '01000')
 ```
