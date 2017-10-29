@@ -8,6 +8,8 @@ extern "C" {
 void setup() { wiringPiSetupSys(); }
 
 RCSwitch* RCSwitch_RCSwitch() { return new RCSwitch(); }
+void RCSwitch_setPulseLength(RCSwitch *s, int nPulseLength) { s->setPulseLength(nPulseLength); }
+void RCSwitch_setRepeatTransmit(RCSwitch *s, int nRepeatTransmit) { s->setRepeatTransmit(nRepeatTransmit); }
 void RCSwitch_enableTransmit(RCSwitch *s, int pin) { s->enableTransmit(pin); }
 void RCSwitch_disableTransmit(RCSwitch *s) { s->disableTransmit(); }
 void RCSwitch_switchOn(RCSwitch *s, const char *group, const char *device) { s->switchOn(group, device); }

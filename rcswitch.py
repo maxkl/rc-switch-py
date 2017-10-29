@@ -16,6 +16,12 @@ class RCSwitch:
 
 	def __init__(self):
 		self.obj = lib.RCSwitch_RCSwitch()
+
+	def set_pulse_length(self, pulse_length):
+		lib.RCSwitch_setPulseLength(self.obj, pulse_length)
+
+	def set_repeat_transmit(self, repeat_transmit):
+		lib.RCSwitch_setRepeatTransmit(self.obj, repeat_transmit)
 	
 	def enable_transmit(self, pin):
 		lib.RCSwitch_enableTransmit(self.obj, pin)
